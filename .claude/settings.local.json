@@ -6,7 +6,12 @@
       "Bash(python3 create_theme.py:*)",
       "Bash(tree:*)",
       "Bash(python3:*)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(/opt/homebrew/Cellar/qt/6.7.3/share/qt/libexec/rcc:*)",
+      "Bash(/opt/homebrew/Cellar/qtbase/6.9.3_1/share/qt/libexec/rcc:*)",
+      "Bash(chmod:*)",
+      "Bash(./scripts/build.sh:*)",
+      "Bash(make build:*)"
     ],
     "deny": [],
     "ask": []

@@ -58,17 +58,32 @@ Then follow steps 2-6 from Method 1.
 
 If you want to modify the theme:
 
-1. Edit files in the `src/qbobsidian/` directory:
-   - `config.json` - Theme metadata and color palette
+1. Edit files in the `src/` directory:
+   - `config.json` - Theme color configuration
    - `stylesheet.qss` - Qt stylesheet (CSS-like syntax)
+   - `resources.qrc` - Resource file listing
    - `icons/*.svg` - UI icons
 
 2. Rebuild the theme:
    ```bash
+   # Using Make (recommended)
+   make build
+
+   # Or using the shell script directly
+   ./scripts/build.sh
+
+   # Or using Python (fallback)
    python3 scripts/build.py
    ```
 
 3. The new `qbobsidian.qbtheme` file will be generated in `dist/`
+
+### Quick Install
+
+```bash
+# Build and install in one command (macOS/Linux)
+make install
+```
 
 ## Project Structure
 
@@ -76,25 +91,28 @@ If you want to modify the theme:
 qbobsidian/
 ├── dist/                    # Built theme files
 │   └── qbobsidian.qbtheme  # Ready-to-use theme file
-├── src/                     # Source files
-│   └── qbobsidian/
-│       ├── config.json      # Theme configuration
-│       ├── stylesheet.qss   # Main stylesheet
-│       └── icons/           # SVG icons
-│           ├── arrow_down.svg
-│           ├── arrow_down_disabled.svg
-│           ├── branch_closed.svg
-│           ├── branch_open.svg
-│           ├── check.svg
-│           ├── checkbox_checked.svg
-│           ├── checkbox_indeterminate.svg
-│           ├── checkbox_unchecked.svg
-│           ├── chevron_down.svg
-│           ├── chevron_down_disabled.svg
-│           ├── chevron_up.svg
-│           └── chevron_up_disabled.svg
+├── src/                     # Source files (flat structure)
+│   ├── config.json          # Theme color configuration
+│   ├── stylesheet.qss       # Main stylesheet
+│   ├── resources.qrc        # Qt resource file
+│   └── icons/               # SVG icons
+│       ├── arrow_down.svg
+│       ├── arrow_down_disabled.svg
+│       ├── branch_closed.svg
+│       ├── branch_open.svg
+│       ├── check.svg
+│       ├── checkbox_checked.svg
+│       ├── checkbox_indeterminate.svg
+│       ├── checkbox_unchecked.svg
+│       ├── chevron_down.svg
+│       ├── chevron_down_disabled.svg
+│       ├── chevron_up.svg
+│       └── chevron_up_disabled.svg
 ├── scripts/                 # Build scripts
-│   └── build.py            # Theme builder
+│   ├── build.sh            # Shell build script (recommended)
+│   ├── build.py            # Python build script (fallback)
+│   └── build_alt.py        # Alternative Python builder
+├── Makefile                # Build automation
 └── README.md               # Documentation
 ```
 
@@ -111,31 +129,46 @@ qbobsidian/
 
 ### Changing Colors
 
-Edit `src/qbobsidian/config.json` and `src/qbobsidian/stylesheet.qss` to customize colors:
+Edit `src/config.json` to customize colors. The config uses dot notation for palette colors:
 
 ```json
 {
   "colors": {
-    "Palette": {
-      "Window": "#1d2021",        // Main background
-      "Text": "#ebdbb2",          // Primary text
-      "Highlight": "#504945",     // Selection background
-      "HighlightedText": "#d79921" // Accent color
-    }
+      "Palette.Window": "#1d2021",
+      "Palette.WindowText": "#ebdbb2",
+      "Palette.Highlight": "#504945",
+      "TransferList.Downloading": "#b8bb26",
+      "TransferList.Uploading": "#83a598"
   }
 }
 ```
 
-In the stylesheet, search and replace color values:
-- `#1d2021` - Dark background
-- `#282828` - Medium background
-- `#3c3836` - Borders
-- `#ebdbb2` - Primary text
-- `#d79921` - Accent/highlight
+You can also customize colors in `src/stylesheet.qss` by searching and replacing hex values.
 
 ### Changing Icons
 
-Replace the SVG files in `src/qbobsidian/icons/` with your own. Keep the same filenames and ensure they're valid SVG format. After making changes, rebuild using `python3 scripts/build.py`.
+Replace the SVG files in `src/icons/` with your own. Keep the same filenames and ensure they're valid SVG format. After making changes, rebuild using `python3 scripts/build.py`.
+
+## Troubleshooting
+
+### Theme Not Loading
+
+If the theme doesn't work in qBittorrent:
+
+1. **Check qBittorrent version**: This theme requires qBittorrent v4.1.0 or higher
+2. **Verify installation**: Make sure you selected the correct `.qbtheme` file
+3. **Restart qBittorrent**: The theme only applies after a full restart
+4. **Check logs**: Look for theme-related errors in qBittorrent's console/logs
+5. **Rebuild theme**: Run `python3 scripts/build.py` to rebuild with Qt's rcc tool
+
+### Building Requirements
+
+The build script automatically uses Qt's `rcc` compiler if available (recommended). If Qt is not installed, it will fall back to a Python implementation, which may have compatibility issues.
+
+To install Qt (macOS with Homebrew):
+```bash
+brew install qt
+```
 
 ## License
 

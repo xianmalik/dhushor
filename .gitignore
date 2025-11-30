@@ -35,3 +35,6 @@ __pycache__/
 # Other theme files (if testing)
 *.qbtheme
 !dist/*.qbtheme
+
+# AI Agents
+.claude/
