@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(/opt/homebrew/bin/rcc:*)",
+      "Bash(python3 create_theme.py:*)",
+      "Bash(tree:*)",
+      "Bash(python3:*)",
+      "Bash(cat:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "qBObsidian",
+  "author": "xianmalik",
+  "description": "A minimal dark theme for qBittorrent",
+  "version": "1.0.0",
+  "colors": {
+    "Palette": {
+      "Window": "#1d2021",
+      "WindowText": "#ebdbb2",
+      "Base": "#282828",
+      "AlternateBase": "#1d2021",
+      "ToolTipBase": "#282828",
+      "ToolTipText": "#ebdbb2",
+      "Text": "#ebdbb2",
+      "Button": "#282828",
+      "ButtonText": "#ebdbb2",
+      "BrightText": "#d79921",
+      "Link": "#d79921",
+      "Highlight": "#504945",
+      "HighlightedText": "#d79921"
+    }
+  }
+}
