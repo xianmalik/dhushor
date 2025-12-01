@@ -1,20 +1,21 @@
-# qBObsidian
+# qBMinima
 
-A minimal dark theme for qBittorrent.
+A minimalistic monochrome theme for qBittorrent.
 
 ## Preview
 
-Dark, clean interface with warm orange accents on a charcoal background.
+Ultra-minimal interface with pure black, gray, and white color scheme.
 
 ### Color Palette
 
-- **Background**: `#1d2021` (dark gray-black)
-- **Secondary**: `#282828` (medium gray)
-- **Borders**: `#3c3836` (subtle gray)
-- **Text**: `#ebdbb2` (warm off-white)
-- **Secondary Text**: `#a89984` (muted tan)
-- **Accent**: `#d79921` (warm orange/yellow)
-- **Selection**: `#504945` (muted brown-gray)
+- **Background**: `#0a0a0a` (pure black)
+- **Secondary Background**: `#1a1a1a` (dark gray)
+- **Tertiary Background**: `#2a2a2a` (medium gray)
+- **Borders/Separators**: `#1a1a1a` to `#333333` (subtle grays)
+- **Text**: `#e0e0e0` (light gray)
+- **Highlighted Text**: `#ffffff` (white)
+- **Disabled Text**: `#666666` (muted gray)
+- **Accent/Selection**: `#555555` (medium gray)
 
 ## Installation
 
@@ -118,12 +119,12 @@ qbobsidian/
 
 ## Features
 
-- Minimal, clean dark interface
-- Warm color palette with orange accents
+- Ultra-minimal monochrome interface
+- Pure black, gray, and white color scheme
 - Consistent styling across all UI elements
 - Custom SVG icons matching the theme
-- Low eye strain with muted colors
-- Professional appearance
+- Zero visual distractions - focus on content
+- Professional, clean aesthetic
 
 ## Customization
 
