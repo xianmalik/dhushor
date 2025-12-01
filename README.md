@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-    <img alt="Version" src="https://img.shields.io/badge/Version-2.0.0-pink?style=for-the-badge&labelColor=302D41&logo=git&logoColor=D9E0EE">
+    <img alt="Version" src="https://img.shields.io/badge/Version-2.0.0-9ea1ab?style=for-the-badge&labelColor=3a3a3a&logo=git&logoColor=9EA1AB">
 </p>
 <p align="center">
     A minimalistic monochrome theme for qBittorrent
@@ -13,22 +13,9 @@
     <!-- <a href="https://github.com/xianmalik/dhushor/issues">
         <img alt="Issues" src="https://img.shields.io/github/issues/xianmalik/dhushor?style=for-the-badge&logo=bilibili&color=F5E0DC&logoColor=D9E0EE&labelColor=302D41"></a> -->
     <a href="https://github.com/xianmalik/dhushor">
-        <img alt="Repo Size" src="https://img.shields.io/github/repo-size/xianmalik/dhushor?color=%23DDB6F2&label=SIZE&logo=square&style=for-the-badge&logoColor=D9E0EE&labelColor=302D41"/></a>
+        <img alt="Repo Size" src="https://img.shields.io/github/repo-size/xianmalik/dhushor?color=%239ea1ab&label=SIZE&logo=square&style=for-the-badge&logoColor=D9E0EE&labelColor=3a3a3a"/></a>
     <a href="https://github.com/xianmalik/dhushor/stargazers">
-        <img alt="Stars" src="https://img.shields.io/github/stars/xianmalik/dhushor?style=for-the-badge&logo=starship&color=C9CBFF&logoColor=D9E0EE&labelColor=302D41"></a>
-</p>
-
-<hr />
-
-<p align="center">
-    <h2 align="center">Tech Stack</h2>
-</p>
-
-<p align="center">
-    <a href="https://www.qt.io/"><img src="https://img.shields.io/badge/Qt-302D41?style=for-the-badge&logo=qt&logoColor=4285F4" /></a>
-    <a href="https://doc.qt.io/qt-5/stylesheet-reference.html"><img src="https://img.shields.io/badge/Qt_Stylesheet-302D41.svg?logo=css3&logoColor=white&style=for-the-badge" /></a>
-    <a href="https://www.w3.org/TR/SVG/"><img src="https://img.shields.io/badge/SVG-302D41?logo=svg&logoColor=4285F4&style=for-the-badge" /></a>
-    <a href="https://www.gnu.org/software/make/manual/make.html"><img src="https://img.shields.io/badge/Make-302D41?logo=gnu&logoColor=D9E0EE&style=for-the-badge"/></a>
+        <img alt="Stars" src="https://img.shields.io/github/stars/xianmalik/dhushor?style=for-the-badge&logo=starship&color=9ea1ab&logoColor=D9E0EE&labelColor=3a3a3a"></a>
 </p>
 
 <hr />
@@ -77,16 +64,6 @@ make all
 ```
 
 <p align="center">
-    <h2 align="center">Features</h2>
-</p>
-
-- **Ultra-minimal design**: Pure black, gray, and white color scheme
-- **Consistent styling**: Uniform look across all UI elements
-- **Custom SVG icons**: Matching the monochrome aesthetic
-- **Zero distractions**: Focus on functionality over visual elements
-- **Professional aesthetic**: Clean, modern interface
-
-<p align="center">
     <h2 align="center">Requirements</h2>
 </p>
 
@@ -103,19 +80,19 @@ make all
 make build
 ```
 
-2. **Install the theme**
+1. **Install the theme**
 ```bash
 make install
 ```
 
-3. **Apply the theme in qBittorrent**
+1. **Apply the theme in qBittorrent**
    - Open qBittorrent
    - Go to **Tools** → **Options** → **Behavior**
    - Under **Interface**, click **Use custom UI Theme**
    - Browse and select `dhushor.qbtheme` from the `dist/` folder
    - Restart qBittorrent
 
-4. **Output**
+2. **Output**
 - Theme file: `dist/dhushor.qbtheme`
 
 <p align="center">
