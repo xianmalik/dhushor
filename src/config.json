@@ -25,7 +25,7 @@
   },
   "icons": {
     "browser-cookies": ":/uitheme/icons/preferences-system.svg",
-    "configure": ":/uitheme/icons/preferences-system.svg",
+    "configure": ":/uitheme/icons/configure.svg",
     "dialog-warning": ":/uitheme/icons/error.svg",
     "document-edit": ":/uitheme/icons/edit-delete.svg",
     "document-open": ":/uitheme/icons/document-open.svg",
