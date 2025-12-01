@@ -1,4 +1,4 @@
-# qBMinima
+# Dhūshor
 
 A minimalistic monochrome theme for qBittorrent.
 
@@ -21,18 +21,18 @@ Ultra-minimal interface with pure black, gray, and white color scheme.
 
 ### Method 1: Direct Installation
 
-1. Download `qbobsidian.qbtheme` from the `dist/` folder
+1. Download `dhushor.qbtheme` from the `dist/` folder
 2. Open qBittorrent
 3. Go to **Tools** → **Options** → **Behavior**
 4. Under **Interface**, click **Use custom UI Theme**
-5. Browse and select `qbobsidian.qbtheme`
+5. Browse and select `dhushor.qbtheme`
 6. Restart qBittorrent
 
 ### Method 2: Manual Installation (macOS)
 
 ```bash
 # Copy theme to qBittorrent config directory
-cp dist/qbobsidian.qbtheme ~/Library/Application\ Support/qBittorrent/
+cp dist/dhushor.qbtheme ~/Library/Application\ Support/qBittorrent/
 ```
 
 Then follow steps 2-6 from Method 1.
@@ -41,7 +41,7 @@ Then follow steps 2-6 from Method 1.
 
 ```bash
 # Copy theme to qBittorrent config directory
-cp dist/qbobsidian.qbtheme ~/.config/qBittorrent/
+cp dist/dhushor.qbtheme ~/.config/qBittorrent/
 ```
 
 Then follow steps 2-6 from Method 1.
@@ -50,7 +50,7 @@ Then follow steps 2-6 from Method 1.
 
 ```powershell
 # Copy theme to qBittorrent config directory
-copy dist\qbobsidian.qbtheme %APPDATA%\qBittorrent\
+copy dist\dhushor.qbtheme %APPDATA%\qBittorrent\
 ```
 
 Then follow steps 2-6 from Method 1.
@@ -77,7 +77,7 @@ If you want to modify the theme:
    python3 scripts/build.py
    ```
 
-3. The new `qbobsidian.qbtheme` file will be generated in `dist/`
+3. The new `dhushor.qbtheme` file will be generated in `dist/`
 
 ### Quick Install
 
@@ -89,9 +89,9 @@ make install
 ## Project Structure
 
 ```
-qbobsidian/
+dhushor/
 ├── dist/                    # Built theme files
-│   └── qbobsidian.qbtheme  # Ready-to-use theme file
+│   └── dhushor.qbtheme     # Ready-to-use theme file
 ├── src/                     # Source files (flat structure)
 │   ├── config.json          # Theme color configuration
 │   ├── stylesheet.qss       # Main stylesheet

@@ -11,7 +11,8 @@
       "Bash(/opt/homebrew/Cellar/qtbase/6.9.3_1/share/qt/libexec/rcc:*)",
       "Bash(chmod:*)",
       "Bash(./scripts/build.sh:*)",
-      "Bash(make build:*)"
+      "Bash(make build:*)",
+      "Bash(make clean:*)"
     ],
     "deny": [],
     "ask": []

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo "Building qBObsidian theme..."
+echo "Building Dhūshor theme..."
 
 # Find rcc
 RCC=""
@@ -25,13 +25,13 @@ mkdir -p dist
 
 # Build theme (use zlib compression like working gruvbox theme)
 cd src
-"$RCC" --compress 9 --compress-algo zlib -binary resources.qrc -o ../dist/qbobsidian.qbtheme
+"$RCC" --compress 9 --compress-algo zlib -binary resources.qrc -o ../dist/dhushor.qbtheme
 cd ..
 
 # Show result
-if [ -f "dist/qbobsidian.qbtheme" ]; then
-    SIZE=$(du -h dist/qbobsidian.qbtheme | cut -f1)
-    echo "✓ Successfully built: dist/qbobsidian.qbtheme ($SIZE)"
+if [ -f "dist/dhushor.qbtheme" ]; then
+    SIZE=$(du -h dist/dhushor.qbtheme | cut -f1)
+    echo "✓ Successfully built: dist/dhushor.qbtheme ($SIZE)"
 else
     echo "✗ Build failed"
     exit 1
