@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-    <img alt="Version" src="https://img.shields.io/badge/Version-2.0.0-9ea1ab?style=for-the-badge&labelColor=3a3a3a&logo=git&logoColor=9EA1AB">
+    <img alt="Version" src="https://img.shields.io/badge/Version-1.0.0-9ea1ab?style=for-the-badge&labelColor=3a3a3a&logo=git&logoColor=9EA1AB">
 </p>
 <p align="center">
     A minimalistic monochrome theme for qBittorrent
