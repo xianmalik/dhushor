@@ -1,180 +1,147 @@
-# Dhūshor
+<p align="center">
+  <img src="./assets/dhushor-light.svg" />
+</p>
 
-A minimalistic monochrome theme for qBittorrent.
+<p align="center">
+    <img alt="Version" src="https://img.shields.io/badge/Version-2.0.0-pink?style=for-the-badge&labelColor=302D41&logo=git&logoColor=D9E0EE">
+</p>
+<p align="center">
+    A minimalistic monochrome theme for qBittorrent
+</p>
 
-## Preview
+<p align="center">
+    <!-- <a href="https://github.com/xianmalik/dhushor/issues">
+        <img alt="Issues" src="https://img.shields.io/github/issues/xianmalik/dhushor?style=for-the-badge&logo=bilibili&color=F5E0DC&logoColor=D9E0EE&labelColor=302D41"></a> -->
+    <a href="https://github.com/xianmalik/dhushor">
+        <img alt="Repo Size" src="https://img.shields.io/github/repo-size/xianmalik/dhushor?color=%23DDB6F2&label=SIZE&logo=square&style=for-the-badge&logoColor=D9E0EE&labelColor=302D41"/></a>
+    <a href="https://github.com/xianmalik/dhushor/stargazers">
+        <img alt="Stars" src="https://img.shields.io/github/stars/xianmalik/dhushor?style=for-the-badge&logo=starship&color=C9CBFF&logoColor=D9E0EE&labelColor=302D41"></a>
+</p>
 
-Ultra-minimal interface with pure black, gray, and white color scheme.
+<hr />
 
-### Color Palette
+<p align="center">
+    <h2 align="center">Tech Stack</h2>
+</p>
 
-- **Background**: `#0a0a0a` (pure black)
-- **Secondary Background**: `#1a1a1a` (dark gray)
-- **Tertiary Background**: `#2a2a2a` (medium gray)
-- **Borders/Separators**: `#1a1a1a` to `#333333` (subtle grays)
-- **Text**: `#e0e0e0` (light gray)
-- **Highlighted Text**: `#ffffff` (white)
-- **Disabled Text**: `#666666` (muted gray)
-- **Accent/Selection**: `#555555` (medium gray)
+<p align="center">
+    <a href="https://www.qt.io/"><img src="https://img.shields.io/badge/Qt-302D41?style=for-the-badge&logo=qt&logoColor=4285F4" /></a>
+    <a href="https://doc.qt.io/qt-5/stylesheet-reference.html"><img src="https://img.shields.io/badge/Qt_Stylesheet-302D41.svg?logo=css3&logoColor=white&style=for-the-badge" /></a>
+    <a href="https://www.w3.org/TR/SVG/"><img src="https://img.shields.io/badge/SVG-302D41?logo=svg&logoColor=4285F4&style=for-the-badge" /></a>
+    <a href="https://www.gnu.org/software/make/manual/make.html"><img src="https://img.shields.io/badge/Make-302D41?logo=gnu&logoColor=D9E0EE&style=for-the-badge"/></a>
+</p>
 
-## Installation
+<hr />
 
-### Method 1: Direct Installation
-
-1. Download `dhushor.qbtheme` from the `dist/` folder
-2. Open qBittorrent
-3. Go to **Tools** → **Options** → **Behavior**
-4. Under **Interface**, click **Use custom UI Theme**
-5. Browse and select `dhushor.qbtheme`
-6. Restart qBittorrent
-
-### Method 2: Manual Installation (macOS)
-
-```bash
-# Copy theme to qBittorrent config directory
-cp dist/dhushor.qbtheme ~/Library/Application\ Support/qBittorrent/
-```
-
-Then follow steps 2-6 from Method 1.
-
-### Method 3: Manual Installation (Linux)
-
-```bash
-# Copy theme to qBittorrent config directory
-cp dist/dhushor.qbtheme ~/.config/qBittorrent/
-```
-
-Then follow steps 2-6 from Method 1.
-
-### Method 4: Manual Installation (Windows)
-
-```powershell
-# Copy theme to qBittorrent config directory
-copy dist\dhushor.qbtheme %APPDATA%\qBittorrent\
-```
-
-Then follow steps 2-6 from Method 1.
-
-## Building from Source
-
-If you want to modify the theme:
-
-1. Edit files in the `src/` directory:
-   - `config.json` - Theme color configuration
-   - `stylesheet.qss` - Qt stylesheet (CSS-like syntax)
-   - `resources.qrc` - Resource file listing
-   - `icons/*.svg` - UI icons
-
-2. Rebuild the theme:
-   ```bash
-   # Using Make (recommended)
-   make build
-
-   # Or using the shell script directly
-   ./scripts/build.sh
-
-   # Or using Python (fallback)
-   python3 scripts/build.py
-   ```
-
-3. The new `dhushor.qbtheme` file will be generated in `dist/`
-
-### Quick Install
+<p align="center">
+    <h2 align="center">Quick Start</h2>
+    <small>Ultra-minimal monochrome qBittorrent theme: build & install.</small>
+</p>
 
 ```bash
-# Build and install in one command (macOS/Linux)
+# 1) Clone the repository
+git clone https://github.com/xianmalik/dhushor.git
+cd dhushor
+
+# 2) Build the theme
+make build
+
+# 3) Install the theme
 make install
+
+# Or build and install in one command
+make all
 ```
 
-## Project Structure
+<p align="center">
+    <h2 align="center">Project Structure</h2>
+</p>
 
 ```
-dhushor/
-├── dist/                    # Built theme files
-│   └── dhushor.qbtheme     # Ready-to-use theme file
-├── src/                     # Source files (flat structure)
-│   ├── config.json          # Theme color configuration
-│   ├── stylesheet.qss       # Main stylesheet
-│   ├── resources.qrc        # Qt resource file
-│   └── icons/               # SVG icons
+├── dist/                      # Built theme files
+│   └── dhushor.qbtheme       # Ready-to-use theme file
+├── src/                       # Source files (edit these)
+│   ├── config.json            # Theme color configuration
+│   ├── stylesheet.qss         # Main Qt stylesheet
+│   ├── resources.qrc          # Qt resource file
+│   └── icons/                 # SVG icons
 │       ├── arrow_down.svg
-│       ├── arrow_down_disabled.svg
-│       ├── branch_closed.svg
-│       ├── branch_open.svg
-│       ├── check.svg
 │       ├── checkbox_checked.svg
 │       ├── checkbox_indeterminate.svg
 │       ├── checkbox_unchecked.svg
-│       ├── chevron_down.svg
-│       ├── chevron_down_disabled.svg
-│       ├── chevron_up.svg
-│       └── chevron_up_disabled.svg
-├── scripts/                 # Build scripts
-│   ├── build.sh            # Shell build script (recommended)
-│   ├── build.py            # Python build script (fallback)
-│   └── build_alt.py        # Alternative Python builder
-├── Makefile                # Build automation
-└── README.md               # Documentation
+│       └── ...                 # All theme icons
+├── scripts/                   # Build & automation scripts
+│   └── build.sh               # Shell build script
+├── Makefile                   # Build automation
+└── README.md                  # Documentation
 ```
 
-## Features
+<p align="center">
+    <h2 align="center">Features</h2>
+</p>
 
-- Ultra-minimal monochrome interface
-- Pure black, gray, and white color scheme
-- Consistent styling across all UI elements
-- Custom SVG icons matching the theme
-- Zero visual distractions - focus on content
-- Professional, clean aesthetic
+- **Ultra-minimal design**: Pure black, gray, and white color scheme
+- **Consistent styling**: Uniform look across all UI elements
+- **Custom SVG icons**: Matching the monochrome aesthetic
+- **Zero distractions**: Focus on functionality over visual elements
+- **Professional aesthetic**: Clean, modern interface
 
-## Customization
+<p align="center">
+    <h2 align="center">Requirements</h2>
+</p>
 
-### Changing Colors
+- Qt5 development tools (for `rcc` compiler) - optional, fallback included
+- Python 3.6+ (for fallback Python implementation)
+- Make (for build automation)
 
-Edit `src/config.json` to customize colors. The config uses dot notation for palette colors:
+<p align="center">
+    <h2 align="center">Usage</h2>
+</p>
 
-```json
-{
-  "colors": {
-      "Palette.Window": "#1d2021",
-      "Palette.WindowText": "#ebdbb2",
-      "Palette.Highlight": "#504945",
-      "TransferList.Downloading": "#b8bb26",
-      "TransferList.Uploading": "#83a598"
-  }
-}
-```
-
-You can also customize colors in `src/stylesheet.qss` by searching and replacing hex values.
-
-### Changing Icons
-
-Replace the SVG files in `src/icons/` with your own. Keep the same filenames and ensure they're valid SVG format. After making changes, rebuild using `python3 scripts/build.py`.
-
-## Troubleshooting
-
-### Theme Not Loading
-
-If the theme doesn't work in qBittorrent:
-
-1. **Check qBittorrent version**: This theme requires qBittorrent v4.1.0 or higher
-2. **Verify installation**: Make sure you selected the correct `.qbtheme` file
-3. **Restart qBittorrent**: The theme only applies after a full restart
-4. **Check logs**: Look for theme-related errors in qBittorrent's console/logs
-5. **Rebuild theme**: Run `python3 scripts/build.py` to rebuild with Qt's rcc tool
-
-### Building Requirements
-
-The build script automatically uses Qt's `rcc` compiler if available (recommended). If Qt is not installed, it will fall back to a Python implementation, which may have compatibility issues.
-
-To install Qt (macOS with Homebrew):
+1. **Build the theme**
 ```bash
-brew install qt
+make build
 ```
 
-## License
+2. **Install the theme**
+```bash
+make install
+```
 
-Free to use and modify.
+3. **Apply the theme in qBittorrent**
+   - Open qBittorrent
+   - Go to **Tools** → **Options** → **Behavior**
+   - Under **Interface**, click **Use custom UI Theme**
+   - Browse and select `dhushor.qbtheme` from the `dist/` folder
+   - Restart qBittorrent
 
-## Credits
+4. **Output**
+- Theme file: `dist/dhushor.qbtheme`
 
-Created by xianmalik
+<p align="center">
+    <h2 align="center">Customization</h2>
+</p>
+
+- **Colors**: Edit accent/text colors in `src/config.json`
+- **Icons**: Replace SVG files in `src/icons/` with custom designs
+- **Styles**: Adjust Qt stylesheet in `src/stylesheet.qss`
+- **Layout**: Modify UI elements via CSS-like syntax in stylesheet
+
+<p align="center">
+    <h2 align="center">License</h2>
+</p>
+
+<p align="center">
+This project is open source and available under the <a href="LICENSE">MIT License</a>.
+</p>
+
+<p align="center">
+    <h2 align="center">Author</h2>
+</p>
+
+<p align="center">
+    <strong>Malik Zubayer Ul Haider</strong><br>
+    <a href="https://xianmalik.com">Website</a> •
+    <a href="https://github.com/xianmalik">GitHub</a> •
+    <a href="https://linkedin.com/in/xianmalik">LinkedIn</a>
+</p>
