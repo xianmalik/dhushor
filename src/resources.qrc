@@ -8,6 +8,7 @@
 		<file>icons/checkbox_indeterminate.svg</file>
 		<!-- UI icons -->
 		<file>icons/arrow_down.svg</file>
+		<file>icons/object-locked.svg</file>
 		<!-- Toolbar icons -->
 		<file>icons/torrent-start.svg</file>
 		<file>icons/torrent-stop.svg</file>
