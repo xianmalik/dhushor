@@ -12,7 +12,9 @@
       "Bash(chmod:*)",
       "Bash(./scripts/build.sh:*)",
       "Bash(make build:*)",
-      "Bash(make clean:*)"
+      "Bash(make clean:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)"
     ],
     "deny": [],
     "ask": []
